@@ -37,4 +37,17 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize + 1);
     }
 
+    /**
+     * When given a city,the hasCity function should return whether or not it belongs in the list
+     * checking if the function returns true
+     * if it does not return true, then the test fails
+     */
+    @Test
+    public void hasCityTest(){
+        list = MockCityList();
+        City name = new City("Estevan", "SK");
+        list.addCity(name);
+        assertEquals(true, list.hasCity(name));
+    }
+
 }
