@@ -79,10 +79,10 @@ public class CustomList extends ArrayAdapter<City> {
      *return the size of the list
      */
     public int deleteCity(City city) {
-        //if (cities.contains(city)) {
-        //    cities.remove(city);
-        //}
-        //return getCount();
+        if (cities.contains(city)) {
+            cities.remove(city);
+        }
+        return getCount();
     }
 }
 
