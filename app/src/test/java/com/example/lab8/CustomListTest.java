@@ -68,6 +68,19 @@ public class CustomListTest {
         assertEquals(0, list.deleteCity(name));
     }
 
+    /**
+     * Checks the return value of the getCount function that should:
+     * return how many cities are in the list
+     */
+    @Test
+    public void getCountTest(){
+        list = MockCityList();
+        City name = new City("Estevan", "SK");
+        list.addCity(name);
+
+        assertEquals(1, list.getCount());
+    }
+
 
 
 
