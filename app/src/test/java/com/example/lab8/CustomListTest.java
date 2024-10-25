@@ -1,15 +1,21 @@
 package com.example.lab8;
 
 
+import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 //import org.junit.Before;
 import org.junit.Before;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+
+
 
 public class CustomListTest {
 
@@ -51,15 +57,18 @@ public class CustomListTest {
     }
 
     /**
-     * Check if a city is present in the list.
-     * If it is in the list then remove it from the list,
-     * if not then **throw an exception**
+     * Checks if the deleteCity function
+     * removes a City object from the cities list
      */
     @Test
-    public void deleteCityTest(){
+    public void deleteCityTest() throws Exception {
         list = MockCityList();
         City name = new City("Estevan", "SK");
+        list.addCity(name);
         assertEquals(0, list.deleteCity(name));
     }
+
+
+
 
 }

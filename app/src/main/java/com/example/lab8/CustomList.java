@@ -75,14 +75,18 @@ public class CustomList extends ArrayAdapter<City> {
     /**
      *this deletes a city object from the list
      *Check if a city is present in the list.
-     *If it is in the list then remove it from the list
+     *If it is in the list then remove it from the list,
+     *else throw an exception
      *return the size of the list
      */
-    public int deleteCity(City city) {
+    public int deleteCity(City city) throws Exception {
         if (cities.contains(city)) {
             cities.remove(city);
+        } else {
+            throw new Exception("The City name cannot be found");
         }
         return getCount();
+
     }
 }
 
